@@ -48,3 +48,66 @@ int main()
 	return 0;
 }
 
+//8
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	
+	scanf("%d",&n);
+	
+	if(n % 4 != 0)
+	    printf("common year");
+	else{
+	    if(n%100 != 0)
+	        printf("leap year");
+	    else{
+	        if(n % 400 == 0)
+	            printf("leap year");
+	        else
+	            printf("common year");
+	    }
+	}
+	
+	return 0;
+}
+
+//9 수정필요
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int y1, m1, d1;
+	int y2, m2, d2;
+	
+	scanf("%d/%d/%d", &y1, &m1, &d1);
+	scanf("%d/%d/%d", &y2, &m2, &d2);
+	
+	if(y1 < y2)
+	    printf("%d/%d/%d",y1, m1, d1);
+	else if(y1 > y2)
+	    printf("%d/%d/%d",y2, m2, d2);
+	else{
+	    if(m1 < m2)
+	        printf("%d/%d/%d",y1, m1, d1);
+	    else if(m1 > m2)
+	        printf("%d/%d/%d",y2, m2, d2);
+	    else{
+	        if(d1 < d2)
+	            printf("%d/%d/%d",y1, m1, d1);
+	        else if(d1 > d2)
+	            printf("%d/%d/%d",y2, m2, d2);
+	        else{
+	            printf("%d/%d/%d*",y1, m1, d1);
+	        }
+	    }
+	}
+	
+	
+	return 0;
+}
