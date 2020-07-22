@@ -96,3 +96,24 @@ int main(){
 }
 
 //5
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	int a, b, c;
+	
+	scanf("%d",&n);
+    
+    a = n / 100;
+    n = n % 100;
+    
+    b = n / 10;
+    c = n % 10;
+    
+    (a>b && a > c) ? printf("%d",a) : (b>c) ? printf("%d",b) : printf("%d",c);
+    
+	return 0;
+}
