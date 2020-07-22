@@ -1,0 +1,50 @@
+//7
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	int k;
+	
+	scanf("%d", &n);
+	
+	scanf("%d",&k);
+	
+	if(n == k)
+	    printf("RIGHT");
+	else if(n < k){
+	    printf("DOWN\n");
+	    
+	    scanf("%d",&k);
+	    
+	    if(n == k)
+	        printf("RIGHT");
+	        
+	    else if(n < k)
+	        printf("DOWN");
+	        
+	    else if(n> k)
+	        printf("UP");    
+	    
+	}
+	
+	else if(n> k){
+	    printf("UP\n");
+	    
+	    scanf("%d",&k);
+	    
+	    if(n == k)
+	        printf("RIGHT");
+	        
+	    else if(n < k)
+	        printf("DOWN");
+	        
+	    else if(n> k)
+	        printf("UP");
+	}
+	
+	return 0;
+}
+
