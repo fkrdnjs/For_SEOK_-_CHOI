@@ -43,3 +43,52 @@ int main(void)
     
     return 0;
 }
+
+// 3번
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	int x[10];
+	int i;
+	int a,b;
+	int max, min, max2, min2;
+	
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++)
+	    scanf("%d",&x[i]);
+	    
+	max = x[0] - 1;
+	min = x[0] + 1;
+	    
+	for(i=0;i<n;i++){
+	    if(max < x[i]){
+	        max = x[i];
+	        a = i;
+	    }
+	    if(min > x[i]){
+	        min = x[i];
+	        b = i;
+	    }
+	}
+	    
+    max2 = x[0] - 1;
+    min2 = x[0] + 1;
+    
+    for(i=0;i<n;i++){
+        if(max2 < x[i] && i != a)
+            max2 = x[i];
+        if(min2 > x[i] && i != b)
+            min2 = x[i];
+    }
+  
+    printf("%d\n%d",max2, min2);
+    
+	return 0;
+}
+
+
