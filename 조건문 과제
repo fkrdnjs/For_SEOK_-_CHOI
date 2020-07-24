@@ -1,1 +1,24 @@
+//1
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main()
+{
+	char k;
+	
+	scanf("%c",&k);
+	
+	if(k>='a' && k<='z')
+	    k = k - 'a' + 'A';
+	else if(k>='A' && k<='Z')
+	    k = k + 'a' - 'A';
+	else 
+	    k = k;
+	    
+	printf("%c",k);
+	
+	return 0;
+}
+
+//2
