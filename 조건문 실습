@@ -178,3 +178,39 @@ int main()
 	
 	return 0;
 }
+
+//12
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n, m;
+	int five=0, one=0;
+	
+	scanf("%d",&n);
+	scanf("%d",&m);
+	
+	if(n == 1){
+	    printf("Americano\n");
+	    five = (m-500) / 500;
+	    one = ((m-500) - 500 * five) / 100;
+	}
+	
+	else if(n == 2){
+	    printf("Cafe Latte\n");
+	    five = (m-400) / 500;
+	    one = ((m-400) - 500 * five) / 100;
+	}
+	
+	else if(n == 3){
+	    printf("Lemon Tea\n");
+	    five = (m-300) / 500;
+	    one = ((m-300) - 500 * five) / 100;
+	}
+	
+	printf("%d %d",five, one);
+	
+	return 0;
+}
