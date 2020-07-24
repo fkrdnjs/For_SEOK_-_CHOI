@@ -109,3 +109,38 @@ int main()
 	}
 	return 0;
 }
+
+//10
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int k, e, m;
+	double avg;
+	char grade;
+	
+	scanf("%d %d %d",&k, &e, &m);
+	
+	avg = (double)(k+e+m) / 3.0;
+	
+	if(avg >= 91.5)
+	    grade = 'A';
+	else if(avg >= 85.5)
+	    grade = 'B';
+	else if(avg >= 80.5)
+	    grade = 'C';
+	else
+	    grade = 'F';
+	    
+	printf("%c",grade);
+	    
+	if(k==100 || e ==100 || m == 100)
+	    printf("Good");
+	
+	if(k<60 || e < 60 || m < 60)
+	    printf("Bad");
+	
+	return 0;
+}
