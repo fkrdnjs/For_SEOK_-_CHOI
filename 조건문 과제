@@ -117,3 +117,46 @@ int main()
 }
 
 //3
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int a, b, c;
+	int f = 0;
+	
+	scanf("%d %d %d",&a, &b, &c);
+	
+	if(c == a + b){
+	    printf("+\n");
+	    f = 1;
+	}
+	
+	if(a > b && a - b == c){
+	    printf("-\n");
+	    f = 1;
+	}
+	
+	if(a < b && b - a == c){
+	    printf("-\n");
+        f = 1;
+	}
+	
+	if(c == a * b){
+	    printf("*\n");
+	    f = 1;
+	}
+	
+	if(a / b == c){
+	    printf("/\n");
+	    f = 1;
+	}
+	
+	if(f == 0)
+	    printf("Incorrect");
+    
+	return 0;
+}
+
+//4
