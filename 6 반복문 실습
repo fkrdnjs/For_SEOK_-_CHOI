@@ -6,16 +6,22 @@
 int main()
 {
     int n;
-    int i;
+    int i=1;
     
     scanf("%d",&n);
     
-    for(i=1;i<=n;i++){
+    while(1){
         if(n%i == 0 && i != n)
             printf("%d ",i);
         if(i == n)
             printf("%d",i);
+        i += 1;
+        if(i > n)
+            break;
+        
     }
-
 	return 0;
 }
+
+//2
+
