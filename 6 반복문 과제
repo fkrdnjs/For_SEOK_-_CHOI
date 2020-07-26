@@ -137,3 +137,38 @@ int main()
 	return 0;
 }
 
+//4-2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int n;
+    int big = 0, small = 0, same = 0;
+    int k;
+    int s;
+    
+    scanf("%d",&n);
+    
+    while(1){
+        scanf("%d",&k);
+        if(k == 0)
+            break;
+        while(1){
+            s = k % 10;
+            if(k==0)
+                break;
+            else if(s<n)
+                small += 1;
+            else if(s>n)
+                big += 1;
+            else if(s == n)
+                same += 1;
+             k = k / 10;
+        }
+    }
+	printf("%d %d %d",same,small,big);
+	
+	return 0;
+}
