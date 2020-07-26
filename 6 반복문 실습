@@ -351,3 +351,30 @@ int main()
 	return 0;
 }
 
+//7
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	int i, j;
+	int k = 1;
+	
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+	    for(j=0;j<=i;j++){
+	        if(k<10)
+	            printf(" %d",k);
+	        else
+	            printf(" %d",k%10);
+	        k += 1;
+	    }
+	    printf("\n");
+	}
+	
+	return 0;
+}
+
