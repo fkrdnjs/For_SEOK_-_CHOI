@@ -552,3 +552,26 @@ int main()
 	return 0;
 }
 
+//12
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n;
+	int i;
+	int total = 0;
+	
+	scanf("%d",&n);
+	
+	for(i=1; ; ){
+	    total += i;
+	    if(i == n)
+	        break;
+	    i += 1;
+	}
+	printf("%d",total);
+	
+	return 0;
+}
