@@ -1,1 +1,42 @@
+//1
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main()
+{
+	int n, m, tmp;
+	int i;
+	int cnt2 = 0, sum2 = 0;
+	int cnt3 = 0, sum3 = 0;
+	
+	scanf("%d %d",&n, &m);
+	
+	if(n > m){
+	    tmp = n;
+	    n = m;
+	    m = tmp;
+	}
+	
+	for(i=n;i<=m;i++){
+	    if(i%2 == 0){
+	        printf(" %d",i);
+	        cnt2 += 1;
+	        sum2 += i;
+	    }
+	}
+	
+	printf(" cnt=%d sum=%d\n",cnt2,sum2);
+	
+	for(i=n;i<=m;i++){
+	    if(i%3 == 0){
+	        printf(" %d",i);
+	        cnt3 += 1;
+	        sum3 += i;
+	    }
+	}
+	
+	printf(" cnt=%d sum=%d\n",cnt3,sum3);
+	
+	return 0;
+}
