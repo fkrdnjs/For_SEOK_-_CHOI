@@ -378,3 +378,34 @@ int main()
 	return 0;
 }
 
+//8
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	int n, m;
+	int i, j;
+	int total = 1;
+	
+	scanf("%d %d",&n, &m);
+	
+	for(i=n;i<=m;i++){
+	    printf("%d!=",i);
+	    for(j=1;j<=i;j++){
+	        if(j!=i){
+	            printf("%d*",j);
+	            total *= j;
+	        }
+	        else{
+	            printf("%d=",j);
+	            total *= j;
+	        }
+	    }
+	    printf("%d\n",total);
+	    total = 1;
+	}
+	
+	return 0;
+}
