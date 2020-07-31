@@ -82,3 +82,49 @@ int sum(int k){
     
     return k*(k+1)/2;
 }
+
+//4 내일 수정해라
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define SIZE 5
+
+void print_row1(int x);
+void print_row2(int x);
+
+int main()
+{
+	int n;
+	int i;
+	
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+	    if(i==0 || i == n -1)
+	        print_row1(n);
+	    else
+	        print_row2(n);
+	}
+
+	return 0;
+}
+
+void print_row1(int x){
+    int i;
+    
+    for(i=0;i<x;i++)
+        printf("%d",x);
+    printf("\n");
+}
+
+void print_row2(int x){
+    int i;
+    
+    for(i=0;i<x;i++){
+        if(i == 0 || i == x)
+            printf("%d",x);
+        else
+            printf(" ");
+    }
+    printf("\n");
+}
