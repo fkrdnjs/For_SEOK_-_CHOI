@@ -24,3 +24,34 @@ int main()
 int add(int x, int y){
     return x + y;
 }
+
+//2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int sum(int k);
+
+int main()
+{
+	int a, b;
+	int add;
+	int sub;
+	int result;
+	
+	scanf("%d %d",&a, &b);
+	
+	add = sum(b);
+    sub = sum(a);
+    result = add - sub + a;
+    
+    printf("%d",result);
+    
+	return 0;
+}
+
+int sum(int k){
+    
+    return k*(k+1)/2;
+}
+
