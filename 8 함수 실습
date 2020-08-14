@@ -318,3 +318,60 @@ void die3(int x, int y, int z){
 }
 
 //11
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int ra, rb, rc;
+
+int count_strike(int a, int b, int c);
+int count_ball(int a, int b, int c);
+
+int main()
+{
+    int a, b, c;
+    int strike, ball;
+    
+    scanf("%d %d %d",&ra, &rb, &rc);
+    
+    while(1){
+        scanf("%d %d %d",&a, &b, &c);
+        
+        strike = count_strike(a, b, c);
+        ball = count_ball(a, b, c);
+        
+        printf("%dS%dB\n",strike, ball);
+        
+        if(a == ra && b == rb && c == rc)
+            break;
+        
+    }
+    
+	return 0;
+}
+
+int count_strike(int a, int b, int c){
+    int st=0;
+    
+    if(a == ra)
+        st += 1;
+    if(b == rb)
+        st += 1;
+    if(c == rc)
+        st += 1;
+    return st;
+}
+
+int count_ball(int a, int b, int c){
+    int ba = 0;
+    
+    if(a == rb || a == rc)
+        ba += 1;
+    if(b == ra || b == rc)
+        ba += 1;
+    if(c == ra || c == rb)
+        ba += 1;
+    return ba;
+}
+
+//12
