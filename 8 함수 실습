@@ -165,4 +165,35 @@ void print_triangle(int x){
     
 }
 
-//6
+//7
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int func2(int x, int a, int  b, int c);
+
+int main()
+{
+	int x, a, b, c;
+	int result;
+	
+	scanf("%d",&x);
+	scanf("%d %d %d",&a, &b, &c);
+	
+	result = func2(x,a,b,c);
+  
+    printf("%d",result);
+    
+	return 0;
+}
+
+int func2(int x, int a, int b, int c){
+    
+    int total;
+    
+    total = a*x*x + b*x + c;
+    
+    return total;
+}
+
+//8
