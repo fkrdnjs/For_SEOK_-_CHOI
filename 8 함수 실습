@@ -375,3 +375,41 @@ int count_ball(int a, int b, int c){
 }
 
 //12
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void print(int x, int y, int z){
+    int i;
+    
+    for(i=0;i<x;i++)
+        printf("  ");
+    for(i=0;i<y;i++)
+        printf("*");
+    for(i=0;i<z;i++)
+        printf("  ");
+}
+
+int main(){
+    
+    int k;
+    int a, b, c;
+    int i;
+    
+    scanf("%d",&k);
+    
+    a = k;
+    c = k;
+    
+    for(i=1;i<=k;i++){
+        a -= 1;
+        c -= 1;
+        b = 2 * i - 1;
+        print(a,b,c);
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+//13
