@@ -451,3 +451,53 @@ int main(){
 }
 
 //14
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int isprime(int x){
+    
+    int cnt = 0;
+    int i;
+    
+    for(i=1;i<=x;i++){
+        if(x%i==0)
+            cnt += 1;
+    }
+    if(cnt == 2)
+        return 1;
+    else
+        return 0;
+}
+
+int nextprime(int x){
+    
+    int i;
+    int k;
+    
+    for(i=x+1; ;i++){
+        k = isprime(i);
+        
+        if(k==1)
+            break;
+    }
+    
+    return i;
+}
+
+int main(){
+    
+    int n, m;
+    int i;
+    int k;
+    
+    scanf("%d %d", &n, &m);
+    
+    for(i=0;i<m;i++){
+        k = nextprime(n);
+        printf(" %d",k);
+        n = k;
+    }
+    
+    return 0;
+}
