@@ -351,3 +351,54 @@ int main(){
 }
 
 //5-3
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int add_digits(int n){
+    
+    int k;
+    int result = 0;
+    
+    while(n!=0){
+        k = n % 10;
+        result += k;
+        n = n / 10;
+    }
+    
+    return result;
+}
+
+int main(){
+    
+    int n = 1;
+    int result;
+    int min = 10;
+    int k;
+    
+    while(1){
+        
+        scanf("%d",&n);
+        
+        if(n<0)
+            break;
+        
+        result = add_digits(n);
+        
+        while(1){
+            if(result / 10 == 0)
+                break;
+                
+            result = add_digits(result);
+        }
+        
+        if(min > result){
+            min = result;
+            k = n;
+        }
+    }
+    
+    printf("%d %d",k,min);
+    
+    return 0;
+}
