@@ -141,3 +141,42 @@ int main()
 }
 
 //4-1
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int count(int n, int m){
+    
+    int cnt = 0;
+    int k;
+    
+    while(1){
+        k = n % 10;
+        
+        if(k==m)
+            cnt += 1;
+        
+        n = n / 10;
+        
+        if(n==0)
+            break;
+    }
+    
+    return cnt;
+}
+
+int main(){
+    
+    int n, m;
+    int result;
+    
+    scanf("%d %d",&n, &m);
+    
+    result = count(n,m);
+    
+    printf("%d",result);
+    
+    return 0;
+}
+
+//4-2
