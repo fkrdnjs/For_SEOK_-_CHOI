@@ -109,4 +109,37 @@ int main()
 }
 
 //5
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main()
+{
+    int arr[5];
+    int rank[5] = {1, 1, 1, 1, 1};
+    int *pa, *pr, *pb;
+    
+    for(pa = arr;pa<arr+5;pa++)
+        scanf("%d",pa);
+        
+    pr = rank;
+      
+    for(pa=arr;pa<arr+5;pa++){
+        for(pb=arr;pb<arr+5;pb++){
+            if(*pa<*pb)
+                *pr += 1;
+        }
+        pr += 1;
+    }
+    
+    pr = rank;
+    
+    for(pa=arr;pa<arr+5;pa++){
+        printf("%d=r%d ",*pa, *pr);
+        pr += 1;
+    }
+    
+	return 0;
+}
+
+//6
