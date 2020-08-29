@@ -25,3 +25,29 @@ int main()
 }
 
 //2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char ch[20];
+    char *p = ch;
+    char *q;
+    
+    scanf("%s",p);
+    
+    for(p=ch;*p!='\0';p++){
+        if(*p == '#'){
+            q = p - 1;
+            break;
+        }
+    }
+    
+    for(p=q;p>=ch;p--)
+        printf("%c",*p);
+    
+	return 0;
+}
+
+//3
