@@ -400,3 +400,40 @@ int main()
 }
 
 //13
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int arrsum(int *p, int *q){
+    
+    int *k;
+    int total = 0;
+    
+    for(k=p;k<=q;k++){
+        total += *k;
+    }
+    
+    return total;
+}
+
+int main()
+{
+	int n, s, e;
+	int x[100];
+	int *p;
+	int result;
+	
+	scanf("%d %d %d",&n, &s, &e);
+	
+	for(p=x;p<x+n;p++)
+	    scanf("%d",p);
+	    
+	result = arrsum(x+s,x+e);
+	
+	printf("%d",result);
+	
+    
+	return 0;
+}
+
+//14
