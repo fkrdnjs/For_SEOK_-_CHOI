@@ -285,3 +285,45 @@ int main()
 }
 
 //10
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void gcdlcm(int a, int b, int *p, int *q){
+    
+    int tmp;
+    int i;
+    
+    if(a>b){
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+    
+    for(i=1;i<=a;i++){
+        if(a % i == 0 && b % i ==0)
+            *p = i;
+    }
+    
+    for(i=b; ;i++){
+        if(i % a == 0 && i % b == 0){
+            *q = i;
+            break;
+        }
+    }
+}
+
+int main()
+{
+	int a, b;
+	
+	scanf("%d %d",&a, &b);
+	
+	gcdlcm(a,b,&a,&b);
+	
+	printf("%d %d",a,b);
+
+	return 0;
+}
+
+//11
