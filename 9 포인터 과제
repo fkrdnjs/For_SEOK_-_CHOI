@@ -1,1 +1,46 @@
-//1
+//1 출력 예시 오류라고 했던거 같긴한데 기억이 잘 안난다 내일 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int maxmin(int ar[]){
+    
+    int *p = ar;
+    int max = *p - 1;
+    int min = *p + 1;
+    
+    for(p=ar; ;p++){
+        if(*p == 0)
+            break;
+        if(*p >= max)
+            max = *p;
+        if(*p <= min)
+            min = *p;
+    }
+    
+    return max - min;
+}
+
+int main()
+{
+	int n;
+	int ar[100];
+	int *p = ar;
+	int i;
+	int result;
+	
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+	    for(p = ar; ;p++){
+	        scanf("%d",p);
+	        if(*p == 0)
+	            break;
+	    }
+	    result = maxmin(ar);
+	    
+	    printf("result : %d\n",result);
+	}
+        
+	return 0;
+}
