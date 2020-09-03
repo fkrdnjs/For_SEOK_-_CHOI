@@ -143,3 +143,35 @@ int main()
 }
 
 //6
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char ch[10];
+	char *p = ch;
+	char *q, *r;
+	int cnt = 0;
+	int max = 0;
+	
+	scanf("%s",p);
+	
+	for(p=ch;*p!='\0';p++){
+	    for(q=p;*q!='\0';q++){
+	        if(*q == *p)
+	            cnt += 1;
+	    }
+	    if(max < cnt){
+	        max = cnt;
+	        r = p;
+	    }
+	    cnt = 0;
+	}
+	
+	printf("%c %d",*r,max);
+
+	return 0;
+}
+
+//7
