@@ -360,3 +360,43 @@ int main()
 }
 
 //12
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void add(int *p, int *q, int *r, int n){
+    
+    int *k;
+    
+    q = q + n - 1;
+    
+    for(k=p;k<p+n;k++){
+        *r = *k + *q;
+        q -= 1;
+        r += 1;
+    }
+}
+
+int main()
+{
+	int n;
+	int x[20], y[20], z[20];
+	int *p;
+	
+	scanf("%d",&n);
+	
+	for(p=x;p<x+n;p++)
+	    scanf("%d",p);
+	 
+	for(p=y;p<y+n;p++)
+	    scanf("%d",p);
+	
+	add(x,y,z,n);
+	
+	for(p=z;p<z+n;p++)
+	    printf(" %d",*p);
+    
+	return 0;
+}
+
+//13
