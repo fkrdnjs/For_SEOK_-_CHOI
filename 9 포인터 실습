@@ -327,3 +327,36 @@ int main()
 }
 
 //11
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void strcopy(char a[], char b[]){
+    
+    char *p = a;
+    char *q = b;
+    
+    for(q=b;q<b+6;q++){
+        *p = *q;
+        p += 1;
+    }
+}
+
+int main()
+{
+	char a[6];
+	char b[6];
+    char *p;
+    
+    for(p=b;p<=b+6;p++)
+        scanf("%c",p);
+        
+    strcopy(a,b);
+    
+    for(p=a;p<=a+6;p++)
+        printf("%c",*p);
+    
+	return 0;
+}
+
+//12
