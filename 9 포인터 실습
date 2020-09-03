@@ -201,3 +201,39 @@ int main()
 }
 
 //8
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void swap(int *p, int *q){
+    
+    int tmp;
+    
+    tmp = *p;
+    *p = *q;
+    *q = tmp;
+    
+}
+
+int main()
+{
+	int n, a, b;
+	int ar[50];
+	int *p = ar;
+	
+	scanf("%d",&n);
+	
+	for(p=ar;p<ar+n;p++)
+	    scanf("%d",p);
+	    
+	scanf("%d %d",&a, &b);
+	
+	swap(ar+a,ar+b);
+	
+	for(p=ar;p<ar+n;p++)
+	    printf(" %d",*p);
+
+	return 0;
+}
+
+//9
