@@ -437,3 +437,41 @@ int main()
 }
 
 //14
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int add(int *p, int *q){
+    
+    int total = 0;
+    int *k;
+    
+    for(k=p;k<=q;k++)
+        total += *k;
+        
+    return total;
+}
+
+int main()
+{
+	int n;
+	int x[100];
+	int *p, *q;
+	int result = 0;
+	
+	scanf("%d",&n);
+	
+	for(p=x;p<x+n;p++)
+	    scanf("%d",p);
+	    
+	q = x;
+	
+	for(p=x;p<x+n;p++)
+	    result += add(q,p);
+	
+    printf("%d",result);
+    
+	return 0;
+}
+
+//15
