@@ -44,3 +44,51 @@ int main()
         
 	return 0;
 }
+
+
+
+//2 다시풀기
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int x[6];
+    int *p, *q, *r;
+    int cnt = 0;
+    int f = 0, check = 0;
+    
+    for(p=x;p<x+6;p++)
+        scanf("%d",p);
+        
+    for(p=x;p<x+6;p++){
+        if(p!=x){
+            for(r=x;r<p;r++){
+                if(*r == *p){
+                    check = 1;
+                    break;
+                }
+            }
+        }
+        if(check == 0){
+            for(q=p;q<x+6;q++){
+                if(*q == *p){
+                    f = 1;
+                    cnt += 1;
+                }
+            }
+        }
+        
+        if(cnt >= 2)
+            printf("%d %d\n",*p,cnt);
+        
+        check = 0;
+        cnt = 0;
+    }
+    
+    if(f == 0)
+        printf("%d",f);
+	   
+	return 0;
+}
