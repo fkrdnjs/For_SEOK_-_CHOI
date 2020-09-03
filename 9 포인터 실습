@@ -237,3 +237,51 @@ int main()
 }
 
 //9
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int *mid(int x[3]){
+    
+    int *p = x;
+    int *q = x+1;
+    int *r = x+2;
+    
+    if(*p >= *q && *p >= *r){
+        if(*q >= *r)
+            return q;
+        else
+            return r;
+    }
+    else if(*q >= *p && *q >= *r){
+        if(*p >= *r)
+            return p;
+        else
+            return r;
+    }
+    else if(*r >= *p && *r >= *q){
+        if(*p >= *q)
+            return p;
+        else
+            return q;
+    }
+    
+}
+
+int main()
+{
+	int x[3];
+	int *p = x;
+	int *result;
+	
+	for(p=x;p<x+3;p++)
+	    scanf("%d",p);
+	    
+	result = mid(x);
+	
+	printf("%d",*result);
+
+	return 0;
+}
+
+//10
