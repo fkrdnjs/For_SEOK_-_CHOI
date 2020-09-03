@@ -175,3 +175,29 @@ int main()
 }
 
 //7
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void input(int *p, int *q, int *r){
+    
+    scanf("%d %d %d",p,q,r);
+    
+}
+
+void output(int *p, int *q, int *r){
+    
+    printf("%d %d %d",*p, *q, *r);
+    
+}
+
+int main()
+{
+	int x, y, z;
+	input(&x, &y, &z);
+	output(&x, &y, &z);
+
+	return 0;
+}
+
+//8
