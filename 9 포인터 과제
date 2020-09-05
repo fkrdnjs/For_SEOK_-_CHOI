@@ -94,3 +94,60 @@ int main()
 }
 
 //2-2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int upper(int *arr){
+    
+    int i;
+    
+    for(i=1;i<=45;i++){
+        if(*arr != i && *(arr+1) != i && *(arr+2) != i && *(arr+3) != i && *(arr+4) != i && *(arr+5) != i)
+            break;
+    }
+    
+    return i;
+}
+
+int correct(int *arr){
+    
+    int *p, *q;
+    int k;
+    int f = 0;
+    
+    for(p=arr;p<arr+5;p++){
+        for(q=p+1;q<arr+6;q++){
+            if(*p == *q){
+                k = upper(arr);
+                *p = k;
+                f = 1;
+                break;
+            }
+        }
+    }
+    
+    return f;
+    
+}
+
+int main()
+{
+    int x[6];
+    int *p = x;
+    int result;
+    
+    for(p=x;p<x+6;p++)
+        scanf("%d",p);
+        
+    result = correct(x);
+    
+    printf("%d\n",result);
+    
+    for(p=x;p<x+6;p++)
+        printf("%d ",*p);
+	   
+	return 0;
+}
+
+//3
