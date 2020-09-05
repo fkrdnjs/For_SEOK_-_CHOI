@@ -150,4 +150,73 @@ int main()
 	return 0;
 }
 
-//3
+//3 풀긴했는데 뭔가 거시기함
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void input(char *p, int n){
+    
+    scanf("%s",p);
+        
+}
+
+void upper(char *p, int n){
+    
+    char *q;
+    
+    for(q=p;q<p+n;q++){
+        if(*q >='A' && *q <= 'Z')
+            printf("%c",*q);
+    }
+    
+    printf("\n");
+}
+
+void lower(char *p, int n){
+    
+    char *q;
+    
+    for(q=p;q<p+n;q++){
+        if(*q >='a' && *q <='z')
+            printf("%c",*q);
+    }
+    
+    printf("\n");
+}
+
+int DOUBLE(char *p, int n){
+    
+    char *q;
+    int total = 0;
+    int k;
+    
+    for(q=p;q<p+n;q++){
+        if(*q >= '0' && *q <= '9'){
+            k = *q - '0';
+            total = total * 10 + k;
+        }
+    }
+    
+    return total * 2;
+}
+
+int main()
+{
+    int n;
+    char x[20];
+    int result;
+    
+    scanf("%d",&n);
+    
+    input(x,n);
+    upper(x,n);
+    lower(x,n);
+    result = DOUBLE(x,n);
+    
+    printf("%d",result);
+	   
+	return 0;
+}
+
+//4
