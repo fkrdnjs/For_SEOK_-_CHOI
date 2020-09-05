@@ -47,7 +47,7 @@ int main()
 
 
 
-//2 다시풀기
+//2 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -73,15 +73,15 @@ int main()
         }
         if(check == 0){
             for(q=p;q<x+6;q++){
-                if(*q == *p){
-                    f = 1;
+                if(*q == *p)
                     cnt += 1;
-                }
             }
         }
         
-        if(cnt >= 2)
+        if(cnt >= 2){
             printf("%d %d\n",*p,cnt);
+            f = 0;
+        }
         
         check = 0;
         cnt = 0;
