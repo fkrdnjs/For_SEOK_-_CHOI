@@ -1,6 +1,6 @@
-//1 출력 예시 오류라고 했던거 같긴한데 기억이 잘 안난다 내일 
+//1 - 1   1번들 예시 입력시 0 이후에 입력이 없다고 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> 
 #include <string.h>
 
 int maxmin(int ar[]){
@@ -45,7 +45,78 @@ int main()
 	return 0;
 }
 
+//1-2
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int *maxmin(int ar[]){
+    
+    int *p = ar;
+    int max = *p - 1;
+    int min = *p + 1;
+    int k;
+    int real;
+    int cha = 0;
+    int *r;
+    
+    for(p=ar; ;p++){
+        if(*p == 0)
+            break;
+        if(*p >= max)
+            max = *p;
+        if(*p <= min)
+            min = *p;
+    }
+    
+    k = max - min;
+    p = ar;
+    
+    if(*p > k)
+        real = *p - k;
+    else
+        real = k - *p;
+        
+    r = p;
+            
+    for(p=ar;*p!=0;p++){
+        if(*p > k)
+            cha = *p - k;
+        else
+            cha = k - *p;
+            
+        if(real > cha){
+            real = cha;
+            r = p;
+        }
+    }
+    
+    return r;
+}
+
+int main()
+{
+	int n;
+	int ar[100];
+	int *p = ar;
+	int i;
+	int *result;
+	
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+	    for(p = ar; ;p++){
+	        scanf("%d",p);
+	        if(*p == 0)
+	            break;
+	    }
+	    result = maxmin(ar);
+	    
+	    printf("result : %d\n",*result);
+	}
+        
+	return 0;
+}
 
 //2-1
 #include <stdio.h>
